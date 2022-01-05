@@ -8,12 +8,10 @@ import { Provider } from 'react-redux';
 import postReducer from './reducers';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import Autologger from './Autologger';
 
 
 const enhancer = compose(
-  applyMiddleware(thunk),
-  Autologger()
+  applyMiddleware(thunk)
 )
 const store = createStore(postReducer, composeWithDevTools(enhancer));
 

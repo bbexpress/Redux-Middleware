@@ -1,6 +1,6 @@
 const initialState = {
     items: [],
-    loading: false,
+    loading: true,
     error: null
 }
 const postReducer = (state = initialState, action) =>{
